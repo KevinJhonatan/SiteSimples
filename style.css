@@ -2,21 +2,27 @@
 .corpo {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #fdf6e3; /* Bege claro para harmonizar com logo preta */
+    background-color: #fdf6e3; /* Bege claro */
 }
 
-/* Cabeçalho */
+/* Logo */
+.pet {
+    width: 150px;
+    height: auto;
+}
+
+/* Header */
 .cabeca {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5deb3; /* Bege médio */
+    background-color: #f5deb3;
     padding: 20px 0;
 }
 
-/* Menu */
+/* Navegação */
 .nave {
-    background-color: #f5deb3; /* Harmonioso com o header */
+    background-color: #f5deb3;
     display: flex;
     justify-content: center;
     padding: 15px 0;
@@ -24,21 +30,19 @@
 }
 
 .container {
-    background-color: #ff8c42; /* Laranja suave */
-    color: #000; /* Preto para contraste com a logo */
+    background-color: #ff8c42;
+    color: #000;
     border: none;
     padding: 12px 20px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 .container:hover {
-    background-color: #e57c23; /* Tom laranja mais escuro */
+    background-color: #e57c23;
     transform: translateY(-3px);
-    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
 }
 
 /* Sobre */
@@ -47,7 +51,7 @@
     flex-wrap: wrap;
     gap: 20px;
     padding: 50px;
-    background-color: #fff8f0; /* Fundo suave */
+    background-color: #fff8f0;
 }
 
 .texto {
@@ -63,75 +67,6 @@
 
 /* Produtos */
 .produtos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 50px;
-    background-color: #fff8f0;
-}
-
-.painel-botoes {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    flex: 1;
-    min-width: 180px;
-}
-
-.produto-botao {
-    background-color: #ffb366; /* Laranja claro */
-    color: #000;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    text-align: left;
-    transition: all 0.3s ease;
-}
-
-.produto-botao:hover,
-.produto-botao.ativo {
-    background-color: #e5943a; /* Laranja médio */
-}
-
-.painel-visual {
-    flex: 3;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
-    min-height: 420px;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .produtos {
-        flex-direction: column;
-    }
-    .painel-botoes {
-        flex-direction: row;
-        overflow-x: auto;
-        gap: 12px;
-    }
-    .produto-botao {
-        flex: 0 0 auto;
-        min-width: 120px;
-    }
-}
-.pet {
-    width: 150px; /* reduz tamanho */
-    height: auto;
-}
-
-/* Produtos - carrossel */
-.produtos {
     padding: 40px 20px;
     background-color: #fff8f0;
 }
@@ -142,6 +77,7 @@
     color: #e57c23;
 }
 
+/* Carrossel */
 .carrossel {
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -217,6 +153,50 @@
     text-align: center;
 }
 
+/* Contato */
+.contato {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 50px 125px;
+}
+
+.localiza {
+    width: 750px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.info {
+    flex: 1;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.icon {
+    font-size: 28px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.whatsapp { color: #25d366; }
+.instagram { color: #e1306c; }
+.facebook { color: #1877f2; }
+
 /* Mobile */
 @media (max-width: 768px) {
     .produtos-wrapper {
@@ -224,5 +204,9 @@
     }
     .produto-card {
         min-width: 160px;
+    }
+    .sobre {
+        flex-direction: column;
+        align-items: center;
     }
 }
