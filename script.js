@@ -1,50 +1,30 @@
-const botaoInicio = document.querySelectorAll('.container')[0];
-const botaoProdutos = document.querySelectorAll('.container')[1];
-const botaoContato = document.querySelectorAll('.container')[2];
-
-// Evento para cada botão com valores diferentes
-botaoInicio.addEventListener('click', () => {
-  window.scrollBy({ top: 200, behavior: 'smooth' }); // Início: 20px
-});
-
-botaoProdutos.addEventListener('click', () => {
-  window.scrollBy({ top: 730, behavior: 'smooth' }); // Produtos: 40px
-});
-
-botaoContato.addEventListener('click', () => {
-  window.scrollBy({ top: 1500, behavior: 'smooth' }); // Contato: 60px
-});
-
-
-
-const botoesProdutos = document.querySelectorAll('.produto-botao');
+const cardsProdutos = document.querySelectorAll('.produto-card');
 const img = document.querySelector('.produto-img');
 const titulo = document.querySelector('.produto-titulo');
 const preco = document.querySelector('.produto-preco');
 const descricao = document.querySelector('.produto-descricao');
 
-function atualizarVisualizacao(botao) {
-  botoesProdutos.forEach(b => b.classList.remove('ativo'));
-  botao.classList.add('ativo');
+function atualizarVisualizacaoCard(card) {
+  cardsProdutos.forEach(c => c.classList.remove('ativo'));
+  card.classList.add('ativo');
 
-  const novaImg = botao.getAttribute('data-img');
-  const novoTitulo = botao.getAttribute('data-titulo');
-  const novoPreco = botao.getAttribute('data-preco');
-  const novaDescricao = botao.getAttribute('data-descricao');
+  const novaImg = card.getAttribute('data-img');
+  const novoTitulo = card.getAttribute('data-titulo');
+  const novoPreco = card.getAttribute('data-preco');
+  const novaDescricao = card.getAttribute('data-descricao');
 
-  if (novaImg) {
-    img.src = novaImg;
-    img.alt = novoTitulo || '';
-  }
+  if (novaImg) img.src = novaImg;
   if (novoTitulo) titulo.textContent = novoTitulo;
   if (novoPreco) preco.textContent = novoPreco;
   if (novaDescricao) descricao.textContent = novaDescricao;
 }
 
-botoesProdutos.forEach(botao => {
-  botao.addEventListener('click', () => atualizarVisualizacao(botao));
+// Evento click para cada card
+cardsProdutos.forEach(card => {
+  card.addEventListener('click', () => atualizarVisualizacaoCard(card));
 });
 
-if (botoesProdutos.length > 0) {
-  atualizarVisualizacao(botoesProdutos[0]);
+// Inicializa com primeiro produto
+if (cardsProdutos.length > 0) {
+  atualizarVisualizacaoCard(cardsProdutos[0]);
 }
