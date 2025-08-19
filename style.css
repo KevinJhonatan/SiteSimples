@@ -4,6 +4,7 @@
     background-color: #f5f5f5;
 }
 
+/* ---------- HEADER ---------- */
 .pet {
     width: 200px;
     height: auto;
@@ -13,60 +14,68 @@
     display: flex;
     margin-bottom: 5px;
     background-color: #2c3e50;
-    justify-content: center; /* centraliza na horizontal */
-    gap: 20px; /* espaço entre elementos */
+    justify-content: center;
+    gap: 20px;
 }
 
+/* ---------- MENU ---------- */
 .nave {
-    background-color: #2c3e50; /* cor do menu */
+    background-color: #2c3e50;
     display: flex;   
-    justify-content: center; /* itens na horizontal */
+    justify-content: center;
+    flex-wrap: wrap; /* permite quebrar linha no mobile */
+    gap: 15px;
     padding: 15px 0;
-    margin-bottom: 80px;
-}
-
-.container {
-    background-color: #3498db; /* cor do botão */
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    margin: 0 100px; /* espaçamento lateral */
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease; /* suaviza o movimento */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-/* Efeito ao passar o mouse */
-.container:hover {
-    background-color: #2980b9; /* cor ao passar o mouse */
-    transform: translateY(-3px); /* levanta o botão */
-    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
-}
-
-.sobre{
-    display: flex;
-    
-}
-
-.texto{
-    margin-top: 80px;
-    margin-left: 200px;
-}
-
-.empresa{
-    padding: 50px;
     margin-bottom: 50px;
 }
 
+.container {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.container:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+/* ---------- SOBRE ---------- */
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    flex-wrap: wrap; /* empilha no mobile */
+}
+
+.texto {
+    max-width: 500px;
+}
+
+.empresa {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* ---------- PRODUTOS ---------- */
 .produtos {
   background-color: #2c3e50;
   max-width: 1200px;
-  margin: 0px 0px 24px 24px;
-  padding: 50px 50px;
+  margin: 20px auto;
+  padding: 30px;
   display: flex;
   gap: 24px;
+  border-radius: 12px;
 }
 
 .painel-botoes {
@@ -93,12 +102,10 @@
 .produto-botao:hover {
   background-color: #2980b9;
   transform: translateY(-3px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .produto-botao.ativo {
   background-color: #2980b9;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .painel-visual {
@@ -119,18 +126,15 @@
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  display: block;
 }
 
 .produto-titulo {
-  margin: 8px 0 0;
   font-size: 22px;
   color: #2c3e50;
   text-align: center;
 }
 
 .produto-preco {
-  margin: 0;
   font-size: 18px;
   color: #2980b9;
   font-weight: bold;
@@ -138,46 +142,33 @@
 }
 
 .produto-descricao {
-  margin: 8px 0 0;
   max-width: 720px;
   color: #5d6d7e;
   text-align: center;
   line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-  .produtos {
-    flex-direction: column;
-  }
-  .painel-botoes {
-    width: 100%;
-    flex-direction: row;
-    overflow-x: auto;
-  }
-  .produto-botao {
-    flex: 0 0 auto;
-  }
-}
-
-
+/* ---------- CONTATO ---------- */
 .contato {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  margin: 50px 125px;
+  margin: 50px 20px;
+  flex-wrap: wrap; /* empilha no mobile */
 }
 
 .localiza {
-  width: 750px;          /* aumenta a largura */
-  max-width: 100%;       /* garante que não estoure em telas menores */
-  height: auto;          /* mantém proporção */
+  width: 600px;
+  max-width: 100%;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .info {
   flex: 1;
+  min-width: 250px;
 }
 
 .social-item {
@@ -202,3 +193,31 @@
 .whatsapp { color: #25d366; }
 .instagram { color: #e1306c; }
 .facebook { color: #1877f2; }
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 768px) {
+  .produtos {
+    flex-direction: column;
+  }
+  .painel-botoes {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .produto-botao {
+    flex: 0 0 auto;
+  }
+
+  .sobre {
+    text-align: center;
+  }
+
+  .contato {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    text-align: center;
+  }
+}
