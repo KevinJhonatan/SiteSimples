@@ -1,40 +1,34 @@
+/* Corpo */
 .corpo {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #fdf6e3; /* Bege claro para harmonizar com logo preta */
 }
 
-/* ---------- HEADER ---------- */
-.pet {
-    width: 200px;
-    height: auto;
-}
-
+/* Cabeçalho */
 .cabeca {
     display: flex;
-    margin-bottom: 5px;
-    background-color: #2c3e50;
     justify-content: center;
+    align-items: center;
+    background-color: #f5deb3; /* Bege médio */
+    padding: 20px 0;
+}
+
+/* Menu */
+.nave {
+    background-color: #f5deb3; /* Harmonioso com o header */
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
     gap: 20px;
 }
 
-/* ---------- MENU ---------- */
-.nave {
-    background-color: #2c3e50;
-    display: flex;   
-    justify-content: center;
-    flex-wrap: wrap; /* permite quebrar linha no mobile */
-    gap: 15px;
-    padding: 15px 0;
-    margin-bottom: 50px;
-}
-
 .container {
-    background-color: #3498db;
-    color: white;
+    background-color: #ff8c42; /* Laranja suave */
+    color: #000; /* Preto para contraste com a logo */
     border: none;
     padding: 12px 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     transition: all 0.3s ease;
@@ -42,182 +36,92 @@
 }
 
 .container:hover {
-    background-color: #2980b9;
+    background-color: #e57c23; /* Tom laranja mais escuro */
     transform: translateY(-3px);
     box-shadow: 0 6px 10px rgba(0,0,0,0.3);
 }
 
-/* ---------- SOBRE ---------- */
+/* Sobre */
 .sobre {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 40px;
-    flex-wrap: wrap; /* empilha no mobile */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+    background-color: #fff8f0; /* Fundo suave */
 }
 
 .texto {
-    max-width: 500px;
+    flex: 1;
+    min-width: 300px;
 }
 
 .empresa {
-    max-width: 100%;
+    flex: 1;
+    max-width: 500px;
     height: auto;
-    border-radius: 12px;
 }
 
-/* ---------- PRODUTOS ---------- */
+/* Produtos */
 .produtos {
-  background-color: #2c3e50;
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 30px;
-  display: flex;
-  gap: 24px;
-  border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+    background-color: #fff8f0;
 }
 
 .painel-botoes {
-  width: 280px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    min-width: 180px;
 }
 
 .produto-botao {
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  text-align: left;
+    background-color: #ffb366; /* Laranja claro */
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    transition: all 0.3s ease;
 }
 
-.produto-botao:hover {
-  background-color: #2980b9;
-  transform: translateY(-3px);
-}
-
+.produto-botao:hover,
 .produto-botao.ativo {
-  background-color: #2980b9;
+    background-color: #e5943a; /* Laranja médio */
 }
 
 .painel-visual {
-  flex: 1;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  justify-content: center;
-  min-height: 420px;
-}
-
-.produto-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.produto-titulo {
-  font-size: 22px;
-  color: #2c3e50;
-  text-align: center;
-}
-
-.produto-preco {
-  font-size: 18px;
-  color: #2980b9;
-  font-weight: bold;
-  text-align: center;
-}
-
-.produto-descricao {
-  max-width: 720px;
-  color: #5d6d7e;
-  text-align: center;
-  line-height: 1.5;
-}
-
-/* ---------- CONTATO ---------- */
-.contato {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  margin: 50px 20px;
-  flex-wrap: wrap; /* empilha no mobile */
-}
-
-.localiza {
-  width: 600px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.info {
-  flex: 1;
-  min-width: 250px;
-}
-
-.social-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 12px 0;
-  font-size: 18px;
-  color: #2c3e50;
-}
-
-.icon {
-  font-size: 28px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.icon:hover {
-  transform: scale(1.2);
-}
-
-.whatsapp { color: #25d366; }
-.instagram { color: #e1306c; }
-.facebook { color: #1877f2; }
-
-/* ---------- RESPONSIVO ---------- */
-@media (max-width: 768px) {
-  .produtos {
+    flex: 3;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    display: flex;
     flex-direction: column;
-  }
-  .painel-botoes {
-    width: 100%;
-    flex-direction: row;
-    overflow-x: auto;
-  }
-  .produto-botao {
-    flex: 0 0 auto;
-  }
-
-  .sobre {
-    text-align: center;
-  }
-
-  .contato {
-    flex-direction: column;
+    gap: 16px;
     align-items: center;
-  }
+    justify-content: center;
+    min-height: 420px;
+}
 
-  .info {
-    text-align: center;
-  }
+/* Mobile */
+@media (max-width: 768px) {
+    .produtos {
+        flex-direction: column;
+    }
+    .painel-botoes {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 12px;
+    }
+    .produto-botao {
+        flex: 0 0 auto;
+        min-width: 120px;
+    }
 }
