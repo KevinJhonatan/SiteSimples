@@ -2,12 +2,13 @@
 .corpo {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #fdf6e3; /* Bege claro */
+    background-color: #fdf6e3;
 }
 
 /* Logo */
 .pet {
     width: 150px;
+    max-width: 80%;
     height: auto;
 }
 
@@ -27,6 +28,7 @@
     justify-content: center;
     padding: 15px 0;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .container {
@@ -56,13 +58,16 @@
 
 .texto {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
+    max-width: 600px;
 }
 
 .empresa {
     flex: 1;
     max-width: 500px;
+    width: 100%;
     height: auto;
+    border-radius: 12px;
 }
 
 /* Produtos */
@@ -128,6 +133,7 @@
     gap: 16px;
     align-items: center;
     justify-content: center;
+    max-width: 100%;
 }
 
 .produto-img {
@@ -156,15 +162,16 @@
 /* Contato */
 .contato {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
-    margin: 50px 125px;
+    margin: 50px 20px;
 }
 
 .localiza {
-    width: 750px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 750px;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -172,6 +179,7 @@
 
 .info {
     flex: 1;
+    min-width: 280px;
 }
 
 .social-item {
@@ -199,14 +207,44 @@
 
 /* Mobile */
 @media (max-width: 768px) {
-    .produtos-wrapper {
-        gap: 12px;
-    }
-    .produto-card {
-        min-width: 160px;
-    }
     .sobre {
         flex-direction: column;
         align-items: center;
     }
+
+    .produtos-wrapper {
+        gap: 12px;
+    }
+
+    .produto-card {
+        min-width: 160px;
+    }
+
+    .painel-visual {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .texto {
+        text-align: center;
+    }
+
+    .contato {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .localiza {
+        max-width: 100%;
+    }
+}
+
+/* Touch swipe para carrossel mobile */
+.carrossel {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+
+.produto-card {
+    scroll-snap-align: start;
 }
