@@ -194,7 +194,7 @@
     align-items: center;
     gap: 8px;              /* menor espaço entre emoji e texto */
     margin: 8px 0;
-    font-size: 16px;       /* fonte menor para caber */
+    font-size: 10px;       /* fonte menor para caber */
     color: #2c3e50;
     width: 100%;           /* ocupa só a largura disponível */
     height: auto;          /* ajusta conforme o conteúdo */
