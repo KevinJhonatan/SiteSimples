@@ -201,6 +201,7 @@
     flex-wrap: wrap;     /* deixa quebrar quando não couber */
     justify-content: flex-start;
     text-align: left;
+    white-space: wrap;
 }
 
 .icon {
