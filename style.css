@@ -4,12 +4,17 @@
     font-family: Arial, sans-serif;
     background-color: #fdf6e3;
 }
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Logo */
 .pet {
-    width: 150px;
-    max-width: 80%;
+    width: 120px;
     height: auto;
+    max-width: 100%;
 }
 
 /* Header */
@@ -26,20 +31,22 @@
     background-color: #f5deb3;
     display: flex;
     justify-content: center;
-    padding: 15px 0;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px;
 }
 
 .container {
     background-color: #ff8c42;
-    color: #000;
+    color: #fff;
     border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 15px;
     cursor: pointer;
-    font-size: 16px;
     transition: all 0.3s ease;
+    min-width: 90px;
+    text-align: center;
 }
 
 .container:hover {
@@ -52,8 +59,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 50px;
-    background-color: #fff8f0;
+    padding: 30px 15px;
+    justify-content: center;
+    text-align: center;
 }
 
 .texto {
@@ -162,17 +170,16 @@
 /* Contato */
 .contato {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    margin: 50px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin: 40px 15px;
+    text-align: center;
 }
 
 .localiza {
     width: 100%;
-    max-width: 750px;
-    height: auto;
+    max-width: 400px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -183,14 +190,11 @@
 }
 
 .social-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 12px 0;
-    font-size: 18px;
-    color: #2c3e50;
-    height: 80px;
-    width: 400px;
+    width: 100%;
+    max-width: 320px;
+    font-size: 16px;
+    margin: 8px 0;
+    word-break: break-word; /* evita estourar a tela */
 }
 
 .icon {
@@ -209,9 +213,16 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+    .cabeca {
+        padding: 15px 0;
+    }
+    
     .sobre {
-        flex-direction: column;
-        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .pet {
+        width: 100px;
     }
 
     .produtos-wrapper {
@@ -239,6 +250,16 @@
     .localiza {
         max-width: 100%;
     }
+
+    .container {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+     .social-item {
+        font-size: 15px;
+    }
+}
 }
 
 /* Touch swipe para carrossel mobile */
