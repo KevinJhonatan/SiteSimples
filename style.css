@@ -261,9 +261,9 @@
     }
 
      .social-item {
-        font-size: 15px;
+        font-size: 14px;
+        justify-content: center; /* centraliza os links */
     }
-}
 }
 
 /* Touch swipe para carrossel mobile */
