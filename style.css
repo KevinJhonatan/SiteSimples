@@ -130,14 +130,14 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 5px;
     align-items: center;
     justify-content: center;
     max-width: 100%;
 }
 
 .produto-img {
-    max-width: 50px;
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
