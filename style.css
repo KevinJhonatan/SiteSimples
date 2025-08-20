@@ -184,6 +184,10 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+.localiza:hover {
+    transform: scale(1.2);
+}
+
 .info {
     flex: 1;
     min-width: 280px;
