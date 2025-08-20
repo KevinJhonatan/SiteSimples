@@ -192,13 +192,15 @@
 .social-item {
     display: flex;
     align-items: center;
-    gap: 8px;              /* menor espaço entre emoji e texto */
+    gap: 8px;
     margin: 8px 0;
-    font-size: 10px;       /* fonte menor para caber */
+    font-size: 16px;
     color: #2c3e50;
-    width: 100%;           /* ocupa só a largura disponível */
-    height: auto;          /* ajusta conforme o conteúdo */
-    white-space: nowrap;   /* impede quebra de linha */
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;     /* deixa quebrar quando não couber */
+    justify-content: flex-start;
+    text-align: left;
 }
 
 .icon {
@@ -260,9 +262,10 @@
         padding: 8px 14px;
     }
 
-     .social-item {
-        font-size: 14px;
-        justify-content: center; /* centraliza os links */
+    .social-item {
+        font-size: 14px;      /* fonte menor */
+        justify-content: center;  /* centraliza no mobile */
+        text-align: center;
     }
 }
 
